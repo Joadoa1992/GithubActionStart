@@ -6,9 +6,9 @@ jobs:
   run-gitgub-actions:
     runs-on: ubuntu-latest
     steps:
+      - name: List Files
+        run:
+          pwd
+          ls -a
       - name: Simple JS Action
-        uses: actions/hello-world-javascript-action@v1.1
-        with:
-          who-to-greet: Joakim
-      - name: Log Greeting Time
-        run: echo "${{ steps.greet.outputs.time }}"
+        id: greet
